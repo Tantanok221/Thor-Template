@@ -5,7 +5,7 @@
     "build": "turbo build",
     "pkg": "turbo build --filter='./pkg/*' && pnpm install",
     "dev": "turbo dev",
-    "deploy": "turbo deploy",  
+    "deploy": "turbo deploy",
     "devbe": "turbo dev --filter='./be/*'",
     "devfe": "turbo dev --filter='./fe/*'",
     "devpkg": "turbo dev --filter='./pkg/*'",
@@ -14,10 +14,13 @@
     "db:introspect": "turbo db:introspect",
     "db:push": "turbo db:push",
     "lint": "turbo lint",
-    "env:sync": "npx dotenv-vault login && npx dotenv-vault pull && make copy-env"
+    "env:sync": "npx dotenv-vault login && npx dotenv-vault pull && make copy-env",
+    "env:push": "npx dotenv-vault login && npx dotenv-vault push",
+    "env:new": "npx dotenv-vault new && npx dotenv-vault login && touch .env && touch .env.fe && touch .env.be && npx dotenv-vault push"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
+    "touch": "^3.1.1",
     "turbo": "^2.1.1",
     "typescript": "^5.4.5"
   },
