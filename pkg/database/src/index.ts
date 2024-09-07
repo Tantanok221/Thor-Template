@@ -6,6 +6,24 @@ export function BuildQuery<T extends PgSelect>(query: T){
   return new SelectDatabaseQueryBuilder(query);
 }
 
+export function createPaginationObject<T>(
+  data: T,
+  currentPage: number,
+  pageSize: number,
+  totalCount: number
+) {
+  const totalPage = Math.ceil(totalCount / pageSize);
+  return {
+    data,
+    totalCount,
+    totalPage,
+    nextPageAvailable: currentPage < totalPage,
+    previousPageAvailable: currentPage > 1,
+    pageSize,
+  };
+}
+
+
 class SelectDatabaseQueryBuilder<T extends PgSelect> {
   query: T;
   constructor(query: T) {

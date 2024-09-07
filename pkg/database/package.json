@@ -1,5 +1,5 @@
 {
-  "name": "@repo/database",
+  "name": "@pkg/database",
   "type": "module",
   "packageManager": "pnpm@8.15.6",
   "scripts": {
@@ -19,6 +19,10 @@
     "./helper": {
       "types": "./src/index.ts",
       "default": "./dist/index.js"
+    },
+    "./zod": {
+      "types": "./src/zod/index.ts",
+      "default": "./dist/zod/index.js"
     }
   },
   "devDependencies": {
@@ -27,7 +31,10 @@
   },
   "dependencies": {
     "dotenv": "*",
-    "drizzle-orm": "*",
-    "postgres": "*"
+    "postgres": "*",
+    "drizzle-orm": "^0.33.0",
+    "drizzle-zod": "^0.5.1",
+    "zod": "^3.23.8"
+
   }
 }
