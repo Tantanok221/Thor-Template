@@ -1,5 +1,5 @@
 {
-  "name": "@pkg/database",
+  "name": "@pkg/env",
   "type": "module",
   "packageManager": "pnpm@8.15.6",
   "scripts": {

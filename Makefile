@@ -44,6 +44,8 @@ else
 	# Generate TypeScript interfaces, but don't modify .env
 	@$(PYTHON) merge_env.py .env .env.be .env.temp generate_ts
 	@rm -f .env.temp
+	npx turbo build --filter="./pkg/env"
+	pnpm install
 	@echo "Environment files merged and copied successfully."
 	@echo "TypeScript constants file generated in pkg/env/src/index.ts"
 endif
