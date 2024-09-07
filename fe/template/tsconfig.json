@@ -1,3 +1,9 @@
 {
-  "extends": "@pkg/typescript-config/fe.json"
+  "extends": "@pkg/typescript-config/fe.json",
+  "include": ["src, @pkg/typescript-config/fe.vite.config.ts"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "exclude": ["node_modules", "dist"]
 }

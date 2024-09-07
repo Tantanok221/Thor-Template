@@ -3,9 +3,8 @@
   "type": "module",
   "packageManager": "pnpm@8.15.6",
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc",
-    "build:pkg": "tsc",
+    "build": "rimraf dist && node build.js",
+    "build:pkg": "rimraf dist && node build.js",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:introspect": "drizzle-kit introspect --config=drizzle.config.ts",
@@ -27,14 +26,16 @@
   },
   "devDependencies": {
     "@pkg/typescript-config": "workspace:*",
-    "drizzle-kit": "*"
+    "drizzle-kit": "*",
+    "esbuild": "^0.23.1",
+    "esbuild-plugin-tsc": "^0.4.0",
+    "rimraf": "^6.0.1"
   },
   "dependencies": {
     "dotenv": "*",
-    "postgres": "*",
     "drizzle-orm": "^0.33.0",
     "drizzle-zod": "^0.5.1",
+    "postgres": "*",
     "zod": "^3.23.8"
-
   }
 }
