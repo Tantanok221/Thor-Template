@@ -1,0 +1,31 @@
+{
+  "name": "@be/demo",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts --port 2000",
+    "dev:backend": "wrangler dev src/index.ts --port 2000",
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "cron-test": "wrangler dev src/index.ts --test-scheduled --port 2000",
+    "build": "tsc",
+    "build:pkg": "tsc"
+  },
+  "exports": {
+    "./api": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@clerk/backend": "^1.9.2",
+    "@hono/clerk-auth": "^2.0.0",
+    "@hono/zod-validator": "^0.2.2",
+    "@pkg/typescript-config": "workspace:*",
+    "@pkg/env": "workspace:*",
+    "@pkg/database": "workspace:*",
+    "hono": "^4.5.11"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "wrangler": "^3.57.2"
+    
+  }
+}
