@@ -14,9 +14,10 @@
     "db:introspect": "turbo db:introspect",
     "db:push": "turbo db:push",
     "lint": "turbo lint",
-    "env:sync": "npx dotenv-vault login && npx dotenv-vault pull && make copy-env",
-    "env:push": "npx dotenv-vault login && npx dotenv-vault push",
-    "env:new": "npx dotenv-vault new && npx dotenv-vault login && touch .env && touch .env.fe && touch .env.be && npx dotenv-vault push"
+    "env:sync": "npx dotenv-vault pull development .env && npx dotenv-vault pull development .env.fe npx dotenv-vault pull development .env.be && make copy-env",
+    "env:push": "npx dotenv-vault push development .env && npx dotenv-vault push development .env.fe && npx dotenv-vault push development .env.be",
+    "env:new": "npx dotenv-vault new &&  touch .env && touch .env.fe && touch .env.be && npm run env:push",
+    "env:login": "npx dotenv-vault login"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
