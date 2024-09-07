@@ -13,7 +13,8 @@
     "db:migrate": "turbo db:migrate",
     "db:introspect": "turbo db:introspect",
     "db:push": "turbo db:push",
-    "lint": "turbo lint"
+    "lint": "turbo lint",
+    "env:sync": "npx dotenv-vault login && npx dotenv-vault pull && make copy-env"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
