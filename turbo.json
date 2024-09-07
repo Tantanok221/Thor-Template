@@ -10,7 +10,28 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
+    "deploy": {
+      "dependsOn": ["^build"],
+      "persistent": true,
+      "cache": false
+    },
     "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:generate": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:migrate": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:introspect": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:push": {
       "cache": false,
       "persistent": true
     }
