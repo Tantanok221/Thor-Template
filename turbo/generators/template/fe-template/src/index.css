@@ -1,0 +1,40 @@
+:root {
+  --Background: #111;
+}
+
+body {
+  background-color: var(--Background);
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 13px;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  min-width: 0px;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+
+.noSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
