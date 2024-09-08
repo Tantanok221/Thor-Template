@@ -46,4 +46,43 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       }
     ],
   });
+  plop.setGenerator("be/", {
+    description: "Generate Back End Project",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "What is the name of this back end server?",
+      },
+      {
+        type: "confirm",
+        name: "database",
+        message: "Do you want to use database packages?",
+      },
+      {
+        type: "confirm",
+        name: "redis",
+        message: "Do you want to use redis packages?",
+      },
+      {
+        type: "confirm",
+        name: "clerk",
+        message: "Do you want to use clerk authentication package?",
+      },
+    ],
+    actions: [
+      {
+        type: "copy",
+        data: {
+          src: "{{ turbo.paths.root }}/turbo/generators/template/be-template",
+          destination: "{{ turbo.paths.root }}/be/{{ lowerCase name }}",
+        }
+      },
+      {
+        type: "add",
+        templateFile: "./template/be-template.hbs",
+        path: "{{ turbo.paths.root }}/be/{{ lowerCase name }}/package.json",
+      }
+    ],
+  });
 }
