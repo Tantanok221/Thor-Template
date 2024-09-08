@@ -1,3 +1,3 @@
-import * as schema from "./zod.js"
+import * as user from "./user.js";
 
-export {schema as zodSchema}
+export const zodSchema = { user };

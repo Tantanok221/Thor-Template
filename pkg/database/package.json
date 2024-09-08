@@ -3,12 +3,13 @@
   "type": "module",
   "packageManager": "pnpm@8.15.6",
   "scripts": {
-    "build": "rimraf dist && node build.js",
-    "build:pkg": "rimraf dist && node build.js",
+    "build": "pnpm run codegen && rimraf dist && node build.js",
+    "build:pkg": "pnpm run codegen && rimraf dist && node build.js",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:introspect": "drizzle-kit introspect --config=drizzle.config.ts",
-    "db:push": "drizzle-kit push"
+    "db:push": "drizzle-kit push",
+    "codegen": "rimraf src/zod && node generateZodSchema.js"
   },
   "exports": {
     "./db": {
@@ -29,7 +30,8 @@
     "drizzle-kit": "*",
     "esbuild": "^0.23.1",
     "esbuild-plugin-tsc": "^0.4.0",
-    "rimraf": "^6.0.1"
+    "rimraf": "^6.0.1",
+    "ts-morph": "^23.0.0"
   },
   "dependencies": {
     "dotenv": "*",
