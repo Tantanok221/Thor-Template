@@ -1,5 +1,5 @@
 {
-  "name": "@be/demo",
+  "name": "@be/template",
   "scripts": {
     "dev": "wrangler dev src/index.ts --port 2000",
     "dev:backend": "wrangler dev src/index.ts --port 2000",
@@ -11,7 +11,7 @@
   "exports": {
     "./api": {
       "types": "./src/index.ts",
-      "default": "./dist/index.js"
+      "default": "./dist/index.ts"
     }
   },
   "dependencies": {

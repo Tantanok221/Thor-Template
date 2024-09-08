@@ -5,6 +5,7 @@
     "moduleResolution": "Bundler",
     "strict": true,
     "outDir": "dist",
+		"strictNullChecks": true,
     "rootDir": "src",
     "skipLibCheck": true,
     "lib": ["ESNext"],
