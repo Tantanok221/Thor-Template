@@ -20,7 +20,7 @@
     "env:login": "npx dotenv-vault login"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.3",
     "touch": "^3.1.1",
     "turbo": "^2.1.1",
     "typescript": "^5.4.5"
