@@ -18,12 +18,12 @@
     "@clerk/backend": "^1.9.2",
     "@hono/clerk-auth": "^2.0.0",
     "@hono/zod-validator": "^0.2.2",
-    "@pkg/typescript-config": "workspace:*",
     "@pkg/env": "workspace:*",
     "@pkg/database": "workspace:*",
     "hono": "^4.5.11"
   },
   "devDependencies": {
+    "@pkg/typescript-config": "workspace:*",
     "@cloudflare/workers-types": "^4.20240529.0",
     "wrangler": "^3.57.2"
     
