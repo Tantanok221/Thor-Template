@@ -18,7 +18,7 @@
     "@tanstack/react-query-devtools": "^5.17.1",
     "@tanstack/react-router": "^1.57.8",
     "framer-motion": "^10.17.0",
-    "hono": "^4.5.11",
+    "hono": "^4.6.1",
     "immer": "^10.1.1",
     "normalize.css": "^8.0.1",
     "posthog-js": "^1.108.0",

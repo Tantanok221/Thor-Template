@@ -20,7 +20,7 @@
     "@hono/zod-validator": "^0.2.2",
     "@pkg/env": "workspace:*",
     "@pkg/database": "workspace:*",
-    "hono": "^4.5.11"
+    "hono": "^4.6.1"
   },
   "devDependencies": {
     "@pkg/typescript-config": "workspace:*",
