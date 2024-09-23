@@ -24,11 +24,11 @@ importers:
   be/template:
     dependencies:
       '@clerk/backend':
-        specifier: ^1.12.0
-        version: 1.12.0(react@18.3.1)
+        specifier: ^1.13.2
+        version: 1.13.2(react@18.3.1)
       '@hono/clerk-auth':
         specifier: ^2.0.0
-        version: 2.0.0(@clerk/backend@1.12.0)(hono@4.6.1)
+        version: 2.0.0(@clerk/backend@1.13.2)(hono@4.6.1)
       '@hono/zod-validator':
         specifier: ^0.2.2
         version: 0.2.2(hono@4.6.1)(zod@3.23.8)
@@ -445,11 +445,11 @@ packages:
       '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
 
-  /@clerk/backend@1.12.0(react@18.3.1):
-    resolution: {integrity: sha512-x6xjhqqtRJNeqv0fPprDFLdCXvFXKYG+bHlvmSfCzsjmPLMPqozomETvwQm/ILNvM3sz2YunfOeam7cwFy0kdw==}
+  /@clerk/backend@1.13.2(react@18.3.1):
+    resolution: {integrity: sha512-VpAkb/P/fybC+Rv1uEuUiMXTVxmnl1Umj9wMfS0ZIPx/hu6t3PLVZbGYeNwQULr6mUE5qhomJoEkTsqGyaR8Pg==}
     engines: {node: '>=18.17.0'}
     dependencies:
-      '@clerk/shared': 2.8.0(react@18.3.1)
+      '@clerk/shared': 2.8.1(react@18.3.1)
       '@clerk/types': 4.21.0
       cookie: 0.5.0
       snakecase-keys: 5.4.4
@@ -459,8 +459,8 @@ packages:
       - react-dom
     dev: false
 
-  /@clerk/shared@2.8.0(react@18.3.1):
-    resolution: {integrity: sha512-AWbOAzeHQ9P7x5atE3duSTfNWGq+9Q8TvkF1bW+RrNyRt3PMbw+2twE1K/uHzQXGTwO1dGVZp6VsmsbQa4i2qg==}
+  /@clerk/shared@2.8.1(react@18.3.1):
+    resolution: {integrity: sha512-8LxnrQDj9xdKcOFQa4FSKb3P5loZeLMiynzD9yBJgCBTCJ8dNV//qySlP6xK6z172L8RwnDk29yO9J+v+FS9Sw==}
     engines: {node: '>=18.17.0'}
     requiresBuild: true
     peerDependencies:
@@ -1638,14 +1638,14 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /@hono/clerk-auth@2.0.0(@clerk/backend@1.12.0)(hono@4.6.1):
+  /@hono/clerk-auth@2.0.0(@clerk/backend@1.13.2)(hono@4.6.1):
     resolution: {integrity: sha512-ad+U8jDlBPgXBTv8BRnPrSFC/uX8U0ojiCR77I3WWHm5I9L3/bHsZpQ2lgvLTV3YbJyVmAdKJArEAQiPjodGdA==}
     engines: {node: '>=16.x.x'}
     peerDependencies:
       '@clerk/backend': ^1.0.0
       hono: '>=3.*'
     dependencies:
-      '@clerk/backend': 1.12.0(react@18.3.1)
+      '@clerk/backend': 1.13.2(react@18.3.1)
       hono: 4.6.1
     dev: false
 
