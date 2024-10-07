@@ -31,7 +31,7 @@
     "esbuild": "^0.24.0",
     "esbuild-plugin-tsc": "^0.4.0",
     "rimraf": "^6.0.1",
-    "ts-morph": "^23.0.0"
+    "ts-morph": "^24.0.0"
   },
   "dependencies": {
     "dotenv": "*",
